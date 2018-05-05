@@ -6,13 +6,15 @@ import java.util.List;
 /**
  * Java方法区（运行时常量池）OOM
  * VM Args: -XX:PermSize=10m -XX:MaxPermSize=10m
+ * -XX:PermSize=10m  设置持久代(perm gen)初始值
+ * -XX:MaxPermSize=10m  设置持久代最大值
  * @author wangsch
  */
 public class RuntimeConstantsPoolOOM {
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<String>();
 		int i = 0;
-		
+
 		while(true) {
 			list.add(String.valueOf(++i).intern());
 		}

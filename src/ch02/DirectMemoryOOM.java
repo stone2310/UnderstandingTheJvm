@@ -7,7 +7,7 @@ import sun.misc.Unsafe;
 /**
  * 直接内存溢出OOM
  * 
- * VM Args: -Xmx20M -XX:MaxDirectMemorySize=10M
+ * VM Args: -Xmx20M -XX:MaxDirectMemorySize=10M -XX:+UseSerialGC
  * 
  * @author wangsch
  */
